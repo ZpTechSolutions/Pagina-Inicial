@@ -1,0 +1,1374 @@
+            /* =-=-=-=-=-=-=-=-=-=-=-=-==-=-=-= PADRÕES PAI =-=-=-=-=-=-=-=-=-=-=-=-==-=-=-= */
+
+
+* {margin: 0; /**/ padding: 0;}
+body {margin: 0; /**/ padding: 0; /**/ background-color: rgb(31, 31, 31); /**/ font-family: 'Bahnschrift' , sans-serif;}
+
+body , p , a {color: rgb(255, 255, 255);}
+
+h1 , h2 , h3 , 
+h4 , h5 , h6 , 
+label , a , p {font-family: 'Bahnschrift' , sans-serif; /**/ text-decoration: none;}
+
+::-webkit-scrollbar {width: 17px;}
+::-webkit-scrollbar-track {background-color: rgb(16, 22, 26);}
+::-webkit-scrollbar-thumb {border-radius: 10px; /**/ background-color: rgb(54, 72, 85);}
+::-webkit-scrollbar-thumb:hover {background-color: #ffffff;}
+
+/*KEYFRAMES da Animação dos Botões*/
+@keyframes botao_cc1 
+{
+    0% {left: -100%;}
+    50% , 100% {left: 100%;}
+}
+@keyframes botao_cc2 
+{
+    0% {bottom: -100%;}
+    50% , 100% {bottom: 100%;}
+}
+@keyframes botao_cc3
+{
+    0% {right: -100%;}
+    50% , 100% {right: 100%;}
+}
+@keyframes botao_cc4
+{
+    0% {top: -100%;}
+    50% , 100% {top: 100%;}
+}
+
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                                     NAVBAR                                     |*/
+            /* ----------------------------------------------------------------------------------*/
+
+/*Cor da barra*/
+.menuBarra { background-color: #111111; /**/ width: 100%;}
+.menu /*Menu Total*/
+{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    max-width: 1200px;
+    padding: 4px 0 4px 20px;
+    width: 100%;
+}
+/*Itens*/
+nav
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto 0;
+}
+/*Logo*/
+.menu img {width: 50px;}
+
+/*Itens*/
+.itemMenu ,
+.logoMenu { padding: 0 15px;}
+
+/*Itens*/
+.itemMenu a , 
+.ccMenu a , 
+input { padding: 0 7px; /**/ color: #465eff; /**/ font-family: 'Bahnschrift' , sans-serif;}
+
+/*Itens*/
+.itemMenu a:hover , 
+.ccMenu a:hover
+{
+    border-radius: 5px 5px 0 0;
+    background-color: #ffffff;
+    padding: 26px 7px;
+    transition: 0.3s;
+}
+
+/*Item Final da Barra*/
+.ccMenu
+{
+    text-transform: uppercase;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    transform: translate(0 , -50%);
+}
+
+/*Pesquisa - INPUT*/
+.inputMenu
+{
+    padding: 10px;
+    border-radius: 7px 0 0 7px;
+    border: none;
+    background-color: #ffffff;
+}
+
+/*Pesquisa - INPUT*/
+.inputMenu:focus , 
+.inputMenu:checked , 
+.inputMenu:active
+{
+    transition: 0.5s;
+    font-size: 15px;
+    outline: none;
+    color: rgb(0, 55, 90);
+}
+
+/*Pesquisa - BOTÃO*/
+.botaoMenu
+{
+    padding: 10px;
+    border-radius: 0 7px 7px 0;
+    border: none;
+    background-color: #ffffff;
+}
+
+/*Pesquisa - BOTÃO*/
+.botaoMenu:hover
+{
+    transition: 0.5s;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+/* =-=-=-= Dropdowns Menu =-=-=-= */
+
+.dropdown
+{
+    visibility: hidden;
+    position: absolute;
+    background-color: rgb(94, 0, 0);
+    width: 100%;
+    height: 100px;
+    right: 0;
+    top: 25px;
+}
+.itemMenu:hover span
+{
+    animation: normal ;
+    transition: initial 0.1s ease-in-out;
+    visibility: visible;
+}
+
+/*Item Menu - PRA VOCÊ*/
+.dropdownPraVoce , .dropdownNegocio ,
+.dropdownAgro , .dropdownPub {width: 100%; /**/ margin: 43px 0 0 -192px; /**/ padding: 10px;}
+
+.dropdownInternoPraVoce , .dropdownInternoNegocios ,
+.dropdownInternoAgro , .dropdownInternoPub {margin-left: -45px;}
+
+/* --------------- Item Menu - PRA VOCÊ --------------- */
+
+/*Dropdown - TÍTULO*/
+.dropdownPraVoce > .dropdownInternoPraVoce > .textoPraVoce h2 
+{
+    color: aliceblue; 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; 
+    padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - DIVISÃO PRINCIPAL DO CONTEÚDO PRA VOCE*/
+.dropdownInternoPraVoce {display: flex; /**/ flex-direction: row;}
+
+/*Dropdown - TEXTO*/
+.dropdownPraVoce > .dropdownInternoPraVoce > .textoPraVoce p
+{
+    max-width: 500px;
+    color: rgb(168, 168, 168); 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - BADGES / BOTÕES*/
+.badgePraVoce {padding: 0 20px 0 20px; /**/ display: flex; /**/ flex-direction: column;}
+
+.badgePraVoce > a 
+{
+    color: aliceblue; 
+    border: solid 2px #465eff; 
+    border-radius: 100px; 
+    padding: 10px; 
+    font-size: 13px; 
+    margin: 5px 0; 
+    top: 0;
+}
+
+.badgePraVoce > a:hover 
+{
+    background-color: #465eff; 
+    transition: 0.3s; color: aliceblue; 
+    border: solid 2px #465eff; 
+    border-radius: 100px; 
+    padding: 10px;
+}
+
+/* --------------- Item Menu - NEGÓCIOS --------------- */
+
+/*Dropdown - TÍTULO*/
+.dropdownNegocio > .dropdownInternoNegocios > .textoNegocios h2 
+{
+    color: aliceblue; 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; 
+    padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - DIVISÃO PRINCIPAL DO CONTEÚDO NEGOCIOS*/
+.dropdownInternoNegocios {display: flex; /**/ flex-direction: row;} 
+
+/*Dropdown - TEXTO*/
+.dropdownNegocio > .dropdownInternoNegocios > .textoNegocios p
+{
+    max-width: 500px;
+    color: rgb(168, 168, 168); 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; 
+    padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - BADGES / BOTÕES*/
+.badgeNegocios {padding: 25px 20px 0 20px; /**/ display: flex; /**/ flex-direction: column;}
+
+.badgeNegocios > a 
+{
+    color: aliceblue; 
+    border: solid 2px #465eff; 
+    border-radius: 100px; 
+    padding: 10px; 
+    font-size: 13px; 
+    margin: 5px 0; 
+    top: 0;
+}
+
+.badgeNegocios > a:hover 
+{
+    background-color: #465eff; 
+    transition: 0.3s; color: aliceblue; 
+    border: solid 2px #465eff;
+    border-radius: 100px; 
+    padding: 10px;
+}
+
+/* --------------- Item Menu - AGRO --------------- */
+
+.dropdownAgro { width: 100%; /**/ padding: 10px;}
+
+/*Dropdown - TÍTULO*/
+.dropdownAgro > .dropdownInternoAgro > .textoAgro h2 
+{
+    color: aliceblue; 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; 
+    padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - DIVISÃO PRINCIPAL DO CONTEÚDO NEGOCIOS*/
+.dropdownInternoAgro {display: flex; /**/ flex-direction: row;}
+
+/*Dropdown - TEXTO*/
+.dropdownAgro > .dropdownInternoAgro > .textoAgro p
+{
+    max-width: 500px;
+    color: rgb(168, 168, 168); 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; 
+    padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - BADGES / BOTÕES*/
+.badgeAgro {padding: 25px 20px 0 20px; /**/ display: flex; /**/ flex-direction: column;}
+
+.badgeAgro > a 
+{
+    color: aliceblue; 
+    border: solid 2px #465eff; 
+    border-radius: 100px; 
+    padding: 10px; 
+    font-size: 13px; 
+    margin: 5px 0; 
+    top: 0;
+}
+
+.badgeAgro > a:hover 
+{
+    background-color: #465eff; 
+    transition: 0.3s; color: aliceblue; 
+    border: solid 2px #465eff;
+    border-radius: 100px; 
+    padding: 10px;
+}
+
+/* --------------- Item Menu - SETOR PÚBLICO --------------- */
+
+.dropdownPub { width: 100%; /**/ margin: 43px 0 0 -192px; /**/ padding: 10px;}
+
+/*Dropdown - TÍTULO*/
+.dropdownPub > .dropdownInternoPub > .textoPub h2 
+{
+    color: aliceblue; 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; 
+    padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - DIVISÃO PRINCIPAL DO CONTEÚDO PRA VOCE*/
+.dropdownInternoPub {display: flex; /**/ flex-direction: row;}
+
+/*Dropdown - TEXTO*/
+.dropdownPub > .dropdownInternoPub > .textoPub p
+{
+    max-width: 500px;
+    color: rgb(168, 168, 168); 
+    font-family: 'Bahnschrift' , sans-serif; 
+    margin: 0 0 0 115px; 
+    padding-left: 15px; 
+    border-left: 2px solid #dbdb00;
+}
+
+/*Dropdown - BADGES / BOTÕES*/
+.badgePub 
+{
+    display: flex; 
+    flex-direction: row; 
+    padding: 25px 5px;
+}
+.badgePub > a 
+{
+    color: aliceblue; 
+    border: solid 2px #465eff; 
+    border-radius: 100px; 
+    padding: 10px; 
+    font-size: 13px; 
+    margin: 5px; 
+    top: 0;
+    text-align: center;
+    min-width: 60px;
+    max-height: 15px;
+}
+.badgePub > a:hover 
+{
+    background-color: #465eff; 
+    transition: 0.3s; color: aliceblue; 
+    border: solid 2px #465eff; 
+    border-radius: 100px; 
+    padding: 10px;
+}
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                                     BANNER                                     |*/
+            /* ----------------------------------------------------------------------------------*/
+
+/*Banner - DIVISÃO PRINCIPAL com Fundo*/
+.bannerPrincipal
+{
+    background-image: url(media/loja.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+}
+
+/*Banner - Conteúdo (Margens e Centralização)*/
+.conteudoBannerPrincipal { max-width: 1100px; /**/ margin: 0 auto; /**/ padding: 80px 0 0 0;}
+
+/*Banner - Conteúdo (Título)*/
+.conteudoBannerPrincipal h1 { font-size: 50px; /**/ width: 300px; /**/ color: #465eff; font-size: 75px;}
+
+/*Banner - Conteúdo (Textos)*/
+.conteudoBannerPrincipal p 
+{
+    font-size: 25px; 
+    width: 450px; 
+    font-family: 'Bahnschrift' , sans-serif; 
+    color: #465eff;
+}
+
+/*Banner - Conteúdo (Imagem QR Code)*/
+.conteudoBannerPrincipal img {width: 80px; /**/ max-width: 80px;}
+
+/*Banner - Conteúdo (Fundo da Imagem QR Code)*/
+.bannerQRPrincipal 
+{ 
+    margin: 25px 0 0 0;
+    background-color: #fcfc30;
+    width: 300px;
+    border-radius: 0 10px 10px 0;
+    max-height: 80px;
+}
+
+/*Banner - Conteúdo (QR Code - Texto)*/
+.bannerQRPrincipal p
+{
+    font-size: 16px; 
+    color: rgb(101, 101, 101); 
+    padding: 21px 20px; 
+    width: 200px; 
+    transform: translateY(-80px); 
+    margin: 0 0 0 73px;
+}
+
+/*Banner - Conteúdo (QR Code - Animação)*/
+.QRanimado 
+{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: -5s;
+}
+
+/*Banner - Conteúdo (QR Code - Animação - Span Geral)*/
+.QRanimado span {position: absolute; /**/ display: block;}
+
+/*Banner - Conteúdo (QR Code - Animação - 1º Span Esq->Dir)*/
+.QRanimado span:nth-child(1) 
+{
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 6px;
+    background-color: #465eff;
+    animation: botao_cc1 1s linear infinite;
+}
+
+/*Banner - Conteúdo (QR Code - Animação - 2º Span Baixo->Cima)*/
+.QRanimado span:nth-child(2) 
+{
+    right: 0;
+    bottom: -100%;
+    width: 6px;
+    height: 100%;
+    background-color: #465eff;
+    animation: botao_cc2 1s linear infinite;
+    animation-delay: .25s;
+}
+
+/*Banner - Conteúdo (QR Code - Animação - 3º Span Dir->Esq)*/
+.QRanimado span:nth-child(3) 
+{
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 6px;
+    background-color: #465eff;
+    animation: botao_cc3 1s linear infinite;
+    animation-delay: .50s;
+}
+
+/*Banner - Conteúdo (QR Code - Animação - 4º Span Cima->Baixo)*/
+.QRanimado span:nth-child(4) 
+{
+    left: 0;
+    top: -100%;
+    width: 6px;
+    height: 100%;
+    background-color: #465eff;
+    animation: botao_cc4 1s linear infinite;
+    animation-delay: .75s;
+}
+
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                                   BENEFICIOS                                   |*/
+            /* ----------------------------------------------------------------------------------*/
+
+
+/*Beneficios - DIVISÃO PRINCIPAL*/
+#beneficios {width: 100%; /**/ max-width: 1100px; /**/ margin: 0 auto;}
+
+/*Beneficios - DIVISÃO SECUNDÁRIA*/
+.conteudoBeneficios { margin-top: 50px;}
+
+/*Beneficios - Título*/
+.conteudoBeneficios > h1 {color: #8696ff; /**/ padding: 0 0 10px 0; /**/ text-align: center;}
+
+/*Beneficios - barra HR*/
+.conteudoBeneficios > hr 
+{
+    max-width: 15%; 
+    background-color: #8696ff; 
+    border-radius: 100px;
+    margin: 0 auto;
+}
+
+/*Beneficios - Tipos*/
+.tiposConteudoBeneficios
+{
+    margin: 30px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Beneficios - Tipos - Classe padronizadora */
+.tipos { margin: 15px 0; /**/ display: flex; /**/ flex-direction: row;}
+
+/*Beneficios - Tipos - Título*/
+.tipos > div > h2 {color: #465eff; /**/ padding: 0 20px;}
+
+/*Beneficios - Tipos - Texto*/
+.tipos > div > p 
+{
+    font-family: 'Bahnschrift' , sans-serif; 
+    font-size: 18px; 
+    color: rgb(168, 168, 168); 
+    padding: 0 20px;
+}
+
+/*Beneficios - Tipos - ícones*/
+.tipos > img {width: 100px; margin: 0 10px;}
+
+/*Beneficios - Tipos - Colunas*/
+.tiposEsquerda {padding: 0 20px 0 0;}
+.tiposDireita {padding: 0 0 0 20px;}
+
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                                   FACILIDADES                                  |*/
+            /* ----------------------------------------------------------------------------------*/
+
+
+/*Facilidades - DIVISÃO PRINCIPAL*/
+#facilidades {margin: 70px 0;}
+
+/*Facilidades - DIVISÃO SECUNDÁRIA*/
+.conteudoFacilidades 
+{
+    display: flex; 
+    flex-direction: row; 
+    width: 1400px; 
+    max-width: 1400px; 
+    margin: 0 auto
+}
+
+/*Facilidades - Banner Facilidades*/
+.imagemFacilidades
+{
+    background-image: url(media/loja.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+    width: 950px;
+    border-radius: 0 10% 30% 0;
+    left: 100%;
+    right: 0;
+}
+
+/*Facilidades - Coluna Facilidades*/
+.vantagensFacilidades {width: 25%;} 
+
+/*Facilidades - Conteúdo Coluna - Título*/
+.conteudoFacilidades h2 {color: #8696ff; /**/ text-align: center; /**/ margin: 0 0 30px 0;}
+
+/*Facilidades - Coluna Facilidades*/
+.colunasFacil {display: flex; /**/ flex-direction: row;}
+.facilColunaEsq , .facilColunaDir {width: 240px;}
+
+/*Facilidades - Coluna Facilidades - Ícones*/
+.cardFacilidades > div > img {margin: -12px 0 0 0; /**/ width: 90px;}
+
+/*Facilidades - Coluna Facilidades - Cards Padronizados*/
+.cardFacilidades 
+{
+    background-color: rgb(38, 51, 60); 
+    width: 80px;
+    height: 80px; 
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 50% 50% 50% 5%;
+    cursor: pointer;
+}
+
+
+/*Facilidades - Coluna Facilidades - Cards Padronizados - Boleto - Texto*/
+.cardFacilidades > .cardFacilBoleto p 
+{
+    text-align: left;
+    margin: -7px 0 0 0px;
+    font-size: 20px; 
+    width: 155px;
+    color: rgb(168, 168, 168);
+    font-family: 'Bahnschrift' , sans-serif;
+    height: 30px;
+    background-color: rgb(38, 51, 60);
+    border-radius: 10px;
+}
+.cardFacilidades:hover > .cardFacilBoleto p   {color: #465eff; /**/ transition: 0.5s;}
+
+
+/*Facilidades - Coluna Facilidades - Cards Padronizados - Tarifa - Texto*/
+.cardFacilidades > .cardFacilTarifa p 
+{
+    text-align: left;
+    margin: -7px 0 0 10px;
+    font-size: 20px; 
+    width: 90px;
+    color: rgb(168, 168, 168);
+    font-family: 'Bahnschrift' , sans-serif;
+    height: 30px;
+    background-color: rgb(38, 51, 60);
+    border-radius: 10px;
+}
+.cardFacilidades:hover > .cardFacilTarifa p   {color: #465eff; /**/ transition: 0.5s;}
+
+
+/*Facilidades - Coluna Facilidades - Cards Padronizados - Pacotes - Texto*/
+.cardFacilidades > .cardFacilPacotes p 
+{
+    text-align: left;
+    margin: -7px 0 0 10px;
+    font-size: 20px; 
+    width: 90px;
+    color: rgb(168, 168, 168);
+    font-family: 'Bahnschrift' , sans-serif;
+    height: 30px;
+    background-color: rgb(38, 51, 60);
+    border-radius: 10px;
+}
+.cardFacilidades:hover > .cardFacilPacotes p   {color: #465eff; /**/ transition: 0.5s;}
+
+
+/*Facilidades - Coluna Facilidades - Cards Padronizados - Relaciona - Texto*/
+.cardFacilidades > .cardFacilRelaciona p 
+{
+    text-align: left;
+    margin: -7px 0 0 10px;
+    font-size: 20px; 
+    width: 140px;
+    color: rgb(168, 168, 168);
+    font-family: 'Bahnschrift' , sans-serif;
+    height: 30px;
+    background-color: rgb(38, 51, 60);
+    border-radius: 10px;
+}
+.cardFacilidades:hover > .cardFacilRelaciona p   {color: #465eff; /**/ transition: 0.5s;}
+
+
+/*Facilidades - Coluna Facilidades - Cards Padronizados - Envelopes - Texto*/
+.cardFacilidades > .cardFacilEnvelopes p 
+{
+    text-align: left;
+    margin: -7px 0 0 10px;
+    font-size: 20px; 
+    width: 115px;
+    color: rgb(168, 168, 168);
+    font-family: 'Bahnschrift' , sans-serif;
+    height: 30px;
+    background-color: rgb(38, 51, 60);
+    border-radius: 10px;
+}
+.cardFacilidades:hover > .cardFacilEnvelopes p   {color: #465eff; /**/ transition: 0.5s;}
+
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                                     LOJA                                     |*/
+            /* ----------------------------------------------------------------------------------*/
+
+
+/*Loja  - DIVISÃO PRINCIPAL*/
+#lojabb { margin: 0 auto;}
+
+/*Loja - DIVISÃO SECUNDÁRIA*/
+.conteudoLoja {max-width: 1100px; /**/ margin: 0 auto;}
+
+/*Loja  - Título*/
+.conteudoLoja h1 {color: #8696ff; /**/ text-align: center;}
+
+/*Loja - SubTítulo*/
+.conteudoLoja h2 
+{
+    color: #465eff; 
+    font-size: 18px; 
+    text-align: center; 
+    margin: 0 0 30px 0;
+}
+
+/*Loja  - Texto*/
+.conteudoLoja p 
+{
+    font-family: 'Bahnschrift' , sans-serif; 
+    color: rgb(168, 168, 168); 
+    font-size: 20px;
+    margin: 0 0 30px 0; 
+    padding: 0 20px;
+}
+
+/*Loja - Texto - Negrito*/
+.conteudoLoja > p > b {color: rgb(209, 209, 209);}
+
+/*Loja - Texto - Negrito*/
+.conteudoLoja div {max-width: 100%;}
+
+/*Loja - Imagem Banner*/
+.bannerLoja
+{
+    background-image: url(media/loja.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+}
+
+/*Loja - Banner - Conteúdo*/
+.conteudoBannerLoja {max-width: 1100px; /**/ margin: 0 auto; /**/ padding: 20px 0;}
+
+/*Loja - Banner - Conteúdo - Título*/
+.conteudoBannerLoja h1 {font-size: 50px; /**/ width: 300px; /**/ color: #fcfc30;}
+
+/*Loja - Banner - Conteúdo - Textos*/
+.conteudoBannerLoja p 
+{
+    font-size: 18px;  
+    width: 450px; 
+    font-family: 'Bahnschrift' , sans-serif; 
+    color: #000;
+}
+
+/*Loja - Banner - Conteúdo - Imagem QR Code*/
+.conteudoBannerLoja img {width: 80px; /**/ max-width: 80px;}
+.bannerQRLoja 
+{ 
+    margin: 25px 0 0 0;
+    display: flex;
+    background-color: #fcfc30;
+    width: 300px;
+    border-radius: 0 10px 10px 0;
+    max-height: 80px;
+}
+
+/*Loja - Banner - Conteúdo - Imagem QR Code - Textos*/
+.bannerQRLoja p {font-size: 16px; /**/ color: rgb(101, 101, 101); /**/ padding: 21px 20px;}
+
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                                     NEGOCIOS                                   |*/
+            /* ----------------------------------------------------------------------------------*/
+
+
+/*Negócios - Barra HR*/
+#negocios > hr 
+{
+    height: 1px; 
+    max-width: 15%; 
+    background-color: #8696ff; 
+    margin: 30px auto; 
+    border: none;
+}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 1ª Coluna*/
+.conteudoNegociosP1 {display: flex; /**/ max-width: 1100px; /**/ margin: 50px auto 0 auto;}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 1ª Coluna - Título*/
+.coluna1NegociosP1 h1 {color: #8696ff; /**/ font-family: 'Bahnschrift' , sans-serif; /**/ margin: 0 0 10px 0;}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 1ª Coluna - Texto*/
+.coluna1NegociosP1 p 
+{
+    color: rgb(168, 168, 168); 
+    font-family: 'Bahnschrift' , sans-serif; 
+    font-size: 23px;
+    padding: 10px 70px 0 0;
+}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - Colunas*/
+.coluna1NegociosP1 , .coluna2NegociosP1 {width: 505px;}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 2ª Coluna*/
+.coluna2NegociosP1 {margin: 0 auto;}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 2ª Coluna(Direita)*/
+.coluna2NegociosP1Dir 
+{
+    width: 345px; 
+    max-width: 345px; 
+    margin: 0 auto; 
+    padding: 60px 0 0 0;
+}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 2ª Coluna(Direita) - Ícone*/
+.coluna2NegociosP1 img {width: 100px;}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 2ª Coluna(Direita) - Título*/
+.coluna2NegociosP1 h1 {color: #465eff; /**/ font-family: 'Bahnschrift' , sans-serif; /**/ font-size: 25px;}
+
+/*Negócios - 1ª Parte Conteúdo Negócios - 2ª Coluna(Direita) - SubTítulo*/
+.coluna2NegociosP1 h2 {color: rgb(168, 168, 168); /**/ font-family: 'Bahnschrift' , sans-serif; /**/ font-size: 20px;}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna*/
+.conteudoNegociosP2 
+{
+    display: flex; 
+    flex-direction: row; 
+    width: 1400px; 
+    max-width: 1400px; 
+    margin: 40px auto
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda)*/
+.coluna1NegociosP2Esq 
+{
+    width: 500px; 
+    padding: 50px 0; 
+    margin: 0 auto; 
+    flex-direction: column; 
+    text-align: center;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Título*/
+.coluna1NegociosP2Esq-Itens h1 {color: #8696ff;}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Textos*/
+.coluna1NegociosP2Esq-Itens p {text-align: left; /**/ padding: 15px 30px 0 30px; /**/ font-size: 20px;}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Botão*/
+.divBotaoNegocios {display: flex; /**/ flex-direction: column; /**/ margin: 30px;}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Botão(tag A)*/
+.botaoNegocios
+{
+    font-family: 'Bahnschrift' , sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #6176ff;
+    background-color: #fcfc30;
+    font-size: 17px;
+    font-weight: 700;
+    overflow: hidden;
+    transition: -5s;
+    width: 140px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.botaoNegocios:hover
+{
+    transition: 0.5s;
+    border-radius: 5px;
+    color: #fcfc30;
+    background-color: #6176ff;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Botão(tag A) - ANIMAÇÃO*/
+.botaoNegocios span {position: absolute; /**/ display: block;}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Botão(tag A) - ANIMAÇÃO(1º Span)*/
+.botaoNegocios span:nth-child(1)
+{
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg , transparent , #8696ff);
+    animation: botao_cc1 1s linear infinite;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Botão(tag A) - ANIMAÇÃO(2º Span)*/
+.botaoNegocios span:nth-child(2)
+{
+    right: 0;
+    bottom: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg , transparent , #8696ff);
+    animation: botao_cc2 1s linear infinite;
+    animation-delay: .25s;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Botão(tag A) - ANIMAÇÃO(3º Span)*/
+.botaoNegocios span:nth-child(3)
+{
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg , transparent , #8696ff);
+    animation: botao_cc3 1s linear infinite;
+    animation-delay: .50s;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 1ª Coluna(Esquerda) - Itens - Botão(tag A) - ANIMAÇÃO(4º Span)*/
+.botaoNegocios span:nth-child(4)
+{
+    left: 0;
+    top: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg , transparent , #8696ff);
+    animation: botao_cc4 1s linear infinite;
+    animation-delay: .75s;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 2ª Coluna(Direita) - Banner*/
+.imagemNegocios
+{
+    background-image: url(media/loja.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 950px;
+    border-radius: 10% 0 0 30%;
+    left: 0;
+    right: 100%;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 2ª Coluna(Direita) - Banner - Título*/
+.imagemNegocios h1 
+{
+    font-size: 50px; 
+    margin: 120px 0 10px 30px; 
+    width: 50px; 
+    color: #fcfc30;
+}
+
+/*Negócios - 2ª Parte Conteúdo Negócios - 2ª Coluna(Direita) - Banner - Textos*/
+.imagemNegocios p 
+{
+    font-size: 20px; 
+    margin: 0 0 10px 30px; 
+    width: 350px; 
+    color: aliceblue; 
+    font-family: 'Bahnschrift' , sans-serif;
+}
+
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                                  AGRO NEGÓCIOS                                 |*/
+            /* ----------------------------------------------------------------------------------*/
+
+
+/*Agro - Barra HR*/
+#agro > hr 
+{
+    height: 1px; 
+    max-width: 15%; 
+    background-color: #8696ff; 
+    margin: 30px auto; 
+    border: none;
+}
+
+/*Agro - Banner*/
+.bannerAgro
+{
+    background-image: url(media/loja.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding: 100px 80px;
+}
+
+/*Agro - Banner - Título*/
+.bannerAgro > h1 
+{
+    color: #465eff; 
+    font-size: 80px; 
+    width: 130px; 
+    margin: 0 0 20px 0;
+}
+
+/*Agro - Banner - Texto*/
+.bannerAgro > p {color: rgb(31, 31, 31); /**/ font-size: 20px; /**/ width: 500px;}
+
+/*Agro - Banner - Botão*/
+.bannerAgro > a {width: 180px; /**/ margin: 30px 0; /**/ text-align: center;}
+
+/*Agro - Banner - Barra abaixo do Banner*/
+.agroNegocios1 
+{
+    background-color: #E9E9E9; 
+    height: 30px; 
+    text-align: center; 
+    font-size: 20px; 
+    padding: 10px 0;
+}
+
+/*Agro - Banner - Barra abaixo do Banner - Texto*/
+.agroNegocios1 p {color: #8696ff;}
+
+/*Agro - Conteúdo Agro (Div Pai)*/
+.conteudoAgro {margin: 50px auto 0 auto; /**/ max-width: 1400px;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Título*/
+.conteudoAgro > h1 {color: #8696ff; /**/ text-align: center; /**/ margin: 0 0 50px 0;}
+
+/*Agro - Conteúdo Agro (Div Pai)*/
+.conteudoAgroSolucoes {display: flex; /**/ flex-direction: row;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Esquerda - Card*/
+.conteudoAgroSolucoesCARD 
+{
+    min-width: 400px;
+    overflow: hidden; 
+    width: 400px; 
+    height: 480px; 
+    background-color: rgb(35, 48, 56); 
+    border-radius: 10px 275px 10px 10px;
+}
+
+/*Agro - Conteúdo Agro (Div Pai) - Esquerda - Card - Imagem*/
+.conteudoAgroSolucoesCARD img {width: 400px; /**/ border-radius: 10px 500px 0 0;}
+.conteudoAgroSolucoesCARD:hover img {transform: scale(1.05); /**/ transition: 0.5s; /**/ cursor: pointer;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Esquerda - Card - Título*/
+.conteudoAgroSolucoesCARD h2 {padding: 20px 10px; /**/ font-size: 25px; /**/ color: #8696ff;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Esquerda - Card - Texto*/
+.conteudoAgroSolucoesCARD p {padding: 10px 10px; /**/ font-size: 20px;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Direita*/
+.conteudoAgroSolucoesTipos 
+{
+    padding: 100px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/*Agro - Conteúdo Agro (Div Pai) - Direita - Tipos*/
+.AgroSolucoesTipos { margin: 15px 0; /**/ display: flex; /**/ flex-direction: row;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Direita - Tipos - Título*/
+.AgroSolucoesTipos > div > h2 {color: #465eff; /**/ padding: 0 20px;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Direita - Tipos - Texto*/
+.AgroSolucoesTipos > div > p 
+{
+    font-family: 'Bahnschrift' , sans-serif; 
+    font-size: 18px; 
+    color: rgb(168, 168, 168); 
+    padding: 0 20px;
+}
+
+/*Agro - Conteúdo Agro (Div Pai) - Direita - Tipos - ícones*/
+.AgroSolucoesTipos > img {width: 125px; height: 125px; margin: 0 10px;}
+
+/*Agro - Conteúdo Agro (Div Pai) - Direita - Tipos - Colunas*/
+.conteudoAgroSolucoesTiposEsq {padding: 0 20px 0 0;}
+.conteudoAgroSolucoesTiposDir {padding: 0 0 0 20px;}
+
+
+            /* ----------------------------------------------------------------------------------*/
+            /* |                               PRÉ-RODAPÉ / RODAPÉ                              |*/
+            /* ----------------------------------------------------------------------------------*/
+
+/* Pré-Rodapé - DIV de Fundo */
+.preFooter 
+{
+    margin: 50px 0 0 0;
+    width: 100%;
+    background-color: rgb(35, 48, 56);
+    height: 200px;
+}
+
+/* Pré-Rodapé - DIV de alocação */
+.conteudoPreFooter 
+{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    transform: translateY(0 , -50%);
+}
+
+/* Pré-Rodapé - DIV PRINCIPAL */
+.conteudoPreFooterDiv 
+{
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    text-align: right;
+}
+
+/* Pré-Rodapé - DIV PRINCIPAL - Colunas */
+.colunasFooter {padding: 55px 20px;}
+
+/* Pré-Rodapé - DIV PRINCIPAL - Colunas - Textos */
+.colunasFooter p {color: #ffffff; /**/ font-size: 15px;}
+
+
+/* Rodapé - DIV de Fundo */
+#rodape {background-color: #818181; /**/ height: 80px; /**/ width: 100%;}
+
+/* Rodapé - DIV PRINCIPAL */
+.MainDivFooter 
+{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 25px 0 0 0;
+}
+
+/* Rodapé - DIV PRINCIPAL - Textos */
+.MainDivFooter p {color: #ffffff; /**/ font-size: 13px;}
+
+/* Rodapé - DIV PRINCIPAL - Razão Social - Texto */
+.MainDivFooter > .footerBBRazao p {width: 400px;}
+
+/* Rodapé - DIV PRINCIPAL - Links */
+.footerLinks {padding: 0 20px;}
+.footerLinks a:hover {text-decoration: underline; }
+.footerLinks1 
+{
+    display: inline-block; 
+    position: absolute; 
+    right: 0; 
+    transform: translateX(-25%);
+}
+.footerLinks2 {display: flex; /**/ padding: 10px 0 0 0;}
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------*/
+/* |                         RESPONSIVIDADE                        |*/
+/* -----------------------------------------------------------------*/
+
+
+/* =-=-=-= Responsividade específica Rodapé =-=-=-= */
+@media screen and (max-width: 1180px)
+{
+    #rodape {height: auto; width: auto;}
+    .MainDivFooter {display: inline; justify-content: center; width: auto;}
+    .footerBBRazao {padding: 5px 10%;}
+    .MainDivFooter > .footerBBRazao p {text-align: center; width: auto;}
+    .footerLinks1 {position: initial; display: inline; right: initial; margin: 0 auto; width: auto;}
+    .footerLinks {width: auto; padding: 0 10px;}
+}
+@media screen and (max-width: 799px)
+{
+    .colunasFooter {padding: 60px 20px 0 20px;}
+    .colunasFooter > div p {font-size: 12px; text-align: right;}
+    .colunasFooter > div h3 {font-size: 15px; text-align: right;} 
+
+    .MainDivFooter > .footerBBRazao p {font-size: 11px;}
+    .footerLinks > a p {font-size: 11px;}
+    .footerLinks2 {width: 480px;}
+}
+
+@media screen and (max-width: 1082px) 
+{
+/* =-=-=-=-=-= MENU =-=-=-=-=-=*/
+    .menu {width: auto;}
+    .menu img {width: 40px;}
+    .itemMenu a {font-size: 13px;}
+    .ccMenu {display: inline; /**/ position: static; /**/ transform: translate(0 , 0);}
+    .itemMenu a:hover {padding: 27px 7px;}
+
+    .dropdownInternoPraVoce , .dropdownInternoNegocios ,
+    .dropdownInternoAgro , .dropdownInternoPub {margin-left: -50px;}
+    .badgePraVoce a , .badgeNegocios a , .badgeAgro a , .badgePub a {padding: 10px;}
+    .badgePraVoce a:hover , .badgeNegocios a:hover , .badgeAgro a:hover , .badgePub a:hover {padding: 10px;}
+
+/* =-=-=-=-=-= BANNER =-=-=-=-=-=*/
+    .conteudoBannerPrincipal {padding: 80px 40px 0 40px;}
+    .conteudoBannerPrincipal p {text-align: left; width: 300px;}
+    .bannerQRPrincipal p {width: 200px;}
+
+/* =-=-=-=-=-= BENFÍCIOS/FACILIDADES =-=-=-=-=-=*/
+    .vantagensFacilidades {width: auto;}
+    #facilidades {width: 990px;}
+    .conteudoFacilidades {width: 990px; margin: 0; left: 0;}
+    .conteudoFacilidades h2 { margin: 0 0 30px 0;}
+    .imagemFacilidades {background-attachment: unset; width: 600px; background-position: left;}
+    .facilColunaEsq , .facilColunaDir {width: 180px;}
+    .cardFacilidades {padding: 15px;}
+    .cardFacilidades > div > img {width: 70px; margin: 0;}
+    .cardFacilidades > .cardFacilBoleto p , .cardFacilidades > .cardFacilTarifa p ,  
+    .cardFacilidades > .cardFacilPacotes p , .cardFacilidades > .cardFacilRelaciona p , 
+    .cardFacilidades > .cardFacilEnvelopes p {font-size: 18px; margin: -5px 0 0 0;}
+
+/* =-=-=-=-=-= LOJA =-=-=-=-=-=*/
+    .conteudoBannerLoja {padding: 20px 40px 0 40px;}
+
+/* =-=-=-=-=-= NEGÓCIOS =-=-=-=-=-=*/
+    .coluna1NegociosP1 h1 {text-align: right; padding: 10px 0 10px 20px;}
+    .coluna1NegociosP1 p {text-align: right; padding: 10px 0 10px 20px;}
+
+    .conteudoNegociosP2 {flex-direction: column-reverse; max-width: 900px;}
+    .imagemNegocios {width: 100%; height: 400px; background-position: left;}
+    .coluna1NegociosP2Esq {width:auto;}
+    .coluna1NegociosP2Esq-Itens {margin: 0 auto;}
+    .coluna1NegociosP2Esq-Itens h1 {text-align: center;}
+
+/* =-=-=-=-=-= AGRO =-=-=-=-=-=*/
+    .bannerAgro > p {color: rgb(31, 31, 31); /**/ font-size: 18px; /**/ width: 350px;}
+    .conteudoAgroSolucoes {flex-direction: column-reverse; margin: 0 auto;}
+    .conteudoAgroSolucoesCARD {margin: 20px 30%; border-radius: 250px 250px 10px 10px;}
+    .conteudoAgroSolucoesCARD img {width: 400px; /**/ border-radius: 500px 500px 0 0;}
+
+}
+@media screen and (max-width: 976px) 
+{
+/* =-=-=-=-=-= MENU =-=-=-=-=-=*/
+    .menu {max-width: auto;}
+    .menu img {width: 35px;}
+    .itemMenu a {font-size: 11px; padding: 0;}
+    .itemMenu a:hover {padding: 5px 2px 28px 2px; border-radius: 5px 6px;}
+    .ccMenu a:hover {padding: 5px;}
+    .inputMenu {padding: 5px; font-size: 12px; height: 27px;}
+    .botaoMenu {padding: 5px;}
+    .inputMenu:focus , 
+    .inputMenu:checked , 
+    .inputMenu:active {font-size: 13px;}
+
+    .dropdownInternoPraVoce , .dropdownInternoNegocios ,
+    .dropdownInternoAgro , .dropdownInternoPub {margin-left: -53px;}
+    .badgePraVoce a , .badgeNegocios a , .badgeAgro a , .badgePub a {padding: 10px;}
+    .badgePraVoce a:hover , .badgeNegocios a:hover , .badgeAgro a:hover , .badgePub a:hover {padding: 10px; border-radius: 20px;}
+
+/* =-=-=-=-=-= BENFÍCIOS/FACILIDADES =-=-=-=-=-=*/
+    #facilidades {width: 790px;}    
+    .vantagensFacilidades {width: auto;} 
+    .conteudoFacilidades {width: 790px;}
+
+/* =-=-=-=-=-= LOJA BB =-=-=-=-=-=*/
+    .bannerLoja {background-position: center;}
+    .conteudoBannerLoja p {width: 280px;}
+
+/* =-=-=-=-=-= NEGÓCIOS =-=-=-=-=-=*/
+    .conteudoNegociosP2 {max-width: 790px;}
+    .coluna2NegociosP1 img {width: 100px; padding: 0 0 0 50px;}
+    .coluna2NegociosP1 h1 {font-size: 20px; padding: 0 50px;}
+    .coluna2NegociosP1 h2 {font-size: 15px; padding: 0 50px;}
+
+/* =-=-=-=-=-= AGRO =-=-=-=-=-=*/
+    .agroNegocios1 p {font-size: 15px;}
+    .AgroSolucoesTipos > img {width: 100px; height: 100px;}
+    .conteudoAgroSolucoesTipos {padding: 30px 0 0 0;}
+
+}
+@media screen and (max-width: 795px) 
+{
+/* =-=-=-=-=-= MENU =-=-=-=-=-=*/
+    .menu {max-width: auto; padding: 4px 0 4px 8px;}
+    .logoMenu {padding: 0;}
+    .itemMenu a:hover {padding: 5px 2px 28px 2px; border-radius: 5px 6px;}
+    .ccMenu a:hover {padding: 5px;}
+    .itemMenu a {padding: 0;}
+    .busca {visibility: hidden; position: absolute;}
+
+    .dropdown h2 {font-size: 22px;}
+    .dropdown p {font-size: 13px;}
+    .dropdownInternoPraVoce , .dropdownInternoNegocios ,
+    .dropdownInternoAgro , .dropdownInternoPub {margin-left: -80px;}
+    .badgePraVoce a , .badgeNegocios a , .badgeAgro a , .badgePub a {padding: 10px; text-align: center;}
+    .badgePraVoce a:hover , .badgeNegocios a:hover , .badgeAgro a:hover , .badgePub a:hover {padding: 10px; border-radius: 20px;}
+
+/* =-=-=-=-=-= BENFÍCIOS/FACILIDADES =-=-=-=-=-=*/
+  #facilidades {width: 500px; margin: 0 auto;}
+  .tipos {flex-direction: column; align-items: center;}
+  .tipos h2 , p {text-align: center;}
+  .vantagensFacilidades {width: auto;} 
+  .conteudoFacilidades {width: 500px; flex-direction: column-reverse;}
+  .imagemFacilidades {width: 500px; height: 400px; margin-bottom: 30px;}
+  .colunasFacil {flex-direction: column;}
+  .facilColunaEsq , .facilColunaDir {width: 180px; display: flex; flex-direction: row;}
+  .facilColunaDir > .cardFacilidades {margin: 0 50px 50px 30px;}
+  .cardFacilidades {margin: 0 22px;}
+  .cardFacilidades > div > img {width: 70px; margin: 0;}
+
+/* =-=-=-=-=-= NEGÓCIOS =-=-=-=-=-=*/
+  .conteudoNegociosP2 {max-width: 600px;}
+
+/* =-=-=-=-=-= AGRO =-=-=-=-=-=*/
+.bannerAgro > p {text-align: left;}
+.agroNegocios1 p {font-size: 14px;}
+.AgroSolucoesTipos > img {width: 90px; height: 90px;}
+.conteudoAgro > h1 {padding: 0 10%;}
+.AgroSolucoesTipos > div > h2 {font-size: 20;}
+.AgroSolucoesTipos > div > p {font-size: 15px; text-align: left;}
+.conteudoAgroSolucoesCARD {margin: 20px 28%;}
+
+}
+@media screen and (max-width: 590px)
+{
+/* =-=-=-=-=-= MENU =-=-=-=-=-=*/
+    .menu {max-width: auto; padding: 4px 0 4px 8px;}
+    .logoMenu {padding: 0;}
+    .itemMenu {padding: 7px; border-right: 1px solid #dbdb00;}
+    .ccMenu {border: none;}
+    .itemMenu a {padding: 0;}
+    .itemMenu a:hover , 
+    .ccMenu a:hover {padding: 14px 2px 28px 2px; border-radius: 5px 6px;}
+    .busca {visibility: hidden; position: absolute;}
+
+    .dropdown {height: 150px;}
+    .dropdownInternoPraVoce , .dropdownInternoNegocios ,
+    .dropdownInternoAgro , .dropdownInternoPub {margin-left: -80px;}
+    .badgePraVoce a , .badgeNegocios a , .badgeAgro a , .badgePub a {padding: 5px 15px; text-align: center;}
+    .badgePraVoce a:hover , .badgeNegocios a:hover , .badgeAgro a:hover {padding: 4px 15px; border-radius: 20px;}
+    .dropdownInternoPub h2 {font-size: 18px;}
+    .dropdownInternoPub p {font-size: 11px;}
+    .badgePub a {padding: 5px; text-align: center;}
+    .badgePub a:hover {padding: 5px; border-radius: 20px;}
+
+/* =-=-=-=-=-= BENFÍCIOS/FACILIDADES =-=-=-=-=-=*/
+  #facilidades {width: 480px;}
+  .vantagensFacilidades {width: auto;} 
+  .conteudoFacilidades {flex-direction: column-reverse; width: 480px;}
+  .imagemFacilidades {width: 100%; height: 370px;}
+  .colunasFacil {flex-direction: column;}
+  .facilColunaEsq , .facilColunaDir {width: 180px; display: flex; flex-direction: row; margin: 0 0 0 0;}
+  .facilColunaDir > .cardFacilidades {margin: 0 50px 50px 30px;}
+  .cardFacilidades > div > img {width: 70px; margin: 0;}
+
+/* =-=-=-=-=-= NEGÓCIOS =-=-=-=-=-=*/
+#negocios {width: 480px;}
+.conteudoNegociosP1 {flex-direction: column;}
+.coluna1NegociosP1 , .coluna2NegociosP1 {width: 480px;}
+.coluna1NegociosP1 h1 {font-size: 28px; text-align: center;}
+.coluna1NegociosP1 p {font-size: 18px; text-align: left;}
+.coluna2NegociosP1Dir img {padding: 0 110px; width: auto;}
+.coluna2NegociosP1Dir h1 {padding: 0; width: auto;}
+.coluna2NegociosP1Dir h2 {padding: 0; width: auto;}
+.conteudoNegociosP2 {max-width: 480px;}
+
+/* =-=-=-=-=-= AGRO =-=-=-=-=-=*/
+.bannerAgro > p {text-align: left;}
+.agroNegocios1 p {font-size: 14px;}
+.AgroSolucoesTipos > img {width: 90px; height: 90px;}
+.conteudoAgro > h1 {padding: 0 10%;}
+.AgroSolucoesTipos > div > h2 {font-size: 20;}
+.AgroSolucoesTipos > div > p {font-size: 15px; text-align: left;}
+
+.conteudoAgroSolucoesTipos {width: 480px;}
+.AgroSolucoesTipos {display: flex; flex-direction: column; align-items: center;}
+
+.conteudoAgroSolucoesCARD {margin: 20px 12%;}
+
+}
+@media screen and (max-width: 512px)
+{
+  /*<Menu>*/
+    .itemMenu a {font-size: 9px; font-weight: bold;}
+
+    .dropdown {height: 150px;}
+    .dropdownInternoPraVoce , .dropdownInternoNegocios ,
+    .dropdownInternoAgro , .dropdownInternoPub {margin-left: -80px;}
+    .badgePraVoce a , .badgeNegocios a , .badgeAgro a , .badgePub a {padding: 5px 15px; text-align: center; font-size: 11px; font-weight: none;}
+    .badgePraVoce a:hover , .badgeNegocios a:hover , .badgeAgro a:hover {padding: 4px 15px; border-radius: 20px;}
+    .colunaPub {display: flex; flex-direction: column;}
+    .dropdownInternoPub h2 {font-size: 18px;}
+    .dropdownInternoPub p {font-size: 13px;}
+    .badgePub {padding: 5px;}
+    .badgePub a {padding: 5px; text-align: center;}
+    .badgePub a:hover {padding: 5px; border-radius: 20px;}
+  /*</Menu>*/
+  /*<Banner>*/
+
+  /*</Banner>*/
+}
